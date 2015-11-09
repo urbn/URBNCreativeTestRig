@@ -1,95 +1,63 @@
-# Created by https://www.gitignore.io/api/objective-c,swift
-
-### Objective-C ###
-# Xcode
-#
-# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
-
-## Build generated
-build/
-DerivedData
-
-## Various settings
+# xcode noise
+[bB]uild/*
+*/[bB]uild/*
 *.pbxuser
 !default.pbxuser
-*.mode1v3
+*.mode*
 !default.mode1v3
-*.mode2v3
 !default.mode2v3
+*.perspective
 *.perspectivev3
 !default.perspectivev3
 xcuserdata
-
-## Other
-*.xccheckout
-*.moved-aside
 *.xcuserstate
-*.xcscmblueprint
-
-## Obj-C/Swift specific
-*.hmap
-*.ipa
-
-# CocoaPods
-#
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# http://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
-#
-#Pods/
-
-# Carthage
-#
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
-
-Carthage/Build
-
-### Objective-C Patch ###
-*.xcscmblueprint
-
-
-### Swift ###
-# Xcode
-#
-# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
-
-## Build generated
-build/
-DerivedData
-
-## Various settings
-*.pbxuser
-!default.pbxuser
-*.mode1v3
-!default.mode1v3
-*.mode2v3
-!default.mode2v3
-*.perspectivev3
-!default.perspectivev3
-xcuserdata
-
-## Other
+# *.xcworkspace
+# *.xcodeproj/*.xcworkspacedata
+!default.xcworkspace
+profile
 *.xccheckout
-*.moved-aside
-*.xcuserstate
 *.xcscmblueprint
 
-## Obj-C/Swift specific
-*.hmap
-*.ipa
+*.moved-aside*
 
-# CocoaPods
-#
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control
-#
-# Pods/
+# IB
+*~.nib
+*~.xib
 
-# Carthage
-#
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
+# Cocoapods
+[Pp]ods/
 
-Carthage/Build
+# Crashlytics
+Crashlytics.framework
+
+# merge stuff
+*.orig
+
+# old skool
+.svn
+
+# mercurial
+.hg
+
+# osx noise
+.DS_Store
+.profile
+*.swp
+Icon?
+
+*~
+*.dat
+*.dep
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+.env
+bin
+.bundle
+docs
+test-reports
