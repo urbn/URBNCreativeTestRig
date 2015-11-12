@@ -75,22 +75,7 @@ class TextOptions: NSObject, NSCopying, NSCoding {
     required override init() { }
     
     internal func attributedString() -> NSAttributedString {
-        let font: UIFont
-        
-        let fontSize = CGFloat(self.fontSize)
-        
-        if typeFace == SystemFonts.Regular.rawValue {
-            font = UIFont.systemFontOfSize(fontSize)
-        }
-        else if typeFace == SystemFonts.Italic.rawValue {
-            font = UIFont.italicSystemFontOfSize(fontSize)
-        }
-        else if typeFace == SystemFonts.Bold.rawValue {
-            font = UIFont.boldSystemFontOfSize(fontSize)
-        }
-        else {
-            font = UIFont(name: typeFace, size: fontSize)!
-        }
+        let font = TextOptions.fontForName(typeFace, size: CGFloat(fontSize))
         
         let textAlignment: NSTextAlignment
         switch alignment {
@@ -116,6 +101,25 @@ class TextOptions: NSObject, NSCopying, NSCoding {
         pStyle.alignment = textAlignment
         
         return NSAttributedString(string: text, attributes: [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor(hexString: textColor), NSKernAttributeName: kerning, NSParagraphStyleAttributeName: pStyle.copy()])
+    }
+    
+    static internal func fontForName(name: String, size: CGFloat) -> (UIFont) {
+        let font: UIFont
+        
+        if name == SystemFonts.Italic.rawValue {
+            font = UIFont.italicSystemFontOfSize(size)
+        }
+        else if name == SystemFonts.Bold.rawValue {
+            font = UIFont.boldSystemFontOfSize(size)
+        }
+        else if UIFont(name: name, size: size) != nil {
+            font = UIFont(name: name, size: size)!
+        }
+        else {
+            font = UIFont.systemFontOfSize(size)
+        }
+        
+        return font
     }
     
     func copyWithZone(zone: NSZone) -> AnyObject {

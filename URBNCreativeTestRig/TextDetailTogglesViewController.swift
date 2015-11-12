@@ -34,22 +34,6 @@ class TextDetailTogglesViewController: UIViewController, UIPickerViewDataSource,
     
     var currentresponder: UIResponder?
     
-    lazy var typeFaces: Array<String> = {
-        var fonts: Array<String> = SystemFonts.allValues
-        
-        let fontFamilies = UIFont.familyNames()
-        for family in fontFamilies {
-            if UIFont.fontNamesForFamilyName(family).count > 0 {
-                fonts.appendContentsOf(UIFont.fontNamesForFamilyName(family))
-            }
-            else {
-                fonts.append(family)
-            }
-        }
-        
-        return fonts
-    }()
-    
     internal init(textOptions: TextOptions, completion: (canceled: Bool, options: TextOptions) -> Void) {
         options = textOptions.copy() as! TextOptions
         completionCallback = completion
@@ -138,7 +122,6 @@ class TextDetailTogglesViewController: UIViewController, UIPickerViewDataSource,
         
         fontField.text = options.typeFace
         values["fontField"] = fontField
-        fontField.inputView = picker
         fontField.setTextBlock = {
             self.options.typeFace = self.fontField.text!
         }
@@ -270,6 +253,24 @@ class TextDetailTogglesViewController: UIViewController, UIPickerViewDataSource,
         currentresponder = nil
     }
     
+    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+        if textField == fontField {
+            let fontVC = FontsTableViewController(completionBlock: { (fontName) -> (Void) in
+                textField.text = fontName
+                self.options.typeFace = fontName
+                self.dismissFonts()
+            })
+
+            let nav = UINavigationController(rootViewController: fontVC)
+            fontVC.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: "dismissFonts")
+            self.presentViewController(nav, animated: true, completion: nil)
+            
+            return false
+        }
+        
+        return true
+    }
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
@@ -291,12 +292,7 @@ class TextDetailTogglesViewController: UIViewController, UIPickerViewDataSource,
     }
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if currentresponder == fontField {
-            return typeFaces.count
-        }
-        else {
-            return TextAlignment.allValues.count
-        }
+        return TextAlignment.allValues.count
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -304,21 +300,11 @@ class TextDetailTogglesViewController: UIViewController, UIPickerViewDataSource,
             return ""
         }
         
-        if currentresponder == fontField {
-            return typeFaces[row]
-        }
-        else {
-            return TextAlignment.allValues[row]
-        }
+        return TextAlignment.allValues[row]
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if currentresponder == fontField {
-            fontField.text = typeFaces[row]
-        }
-        else {
-            alignmentField.text = TextAlignment.allValues[row]
-        }
+        alignmentField.text = TextAlignment.allValues[row]
     }
     
     func dismissKeyboard() {
@@ -355,6 +341,10 @@ class TextDetailTogglesViewController: UIViewController, UIPickerViewDataSource,
     
     func colorSwatchTouched() {
         colorField.becomeFirstResponder()
+    }
+    
+    func dismissFonts() {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 }
 

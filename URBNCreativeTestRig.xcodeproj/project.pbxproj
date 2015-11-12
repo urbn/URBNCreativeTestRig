@@ -18,6 +18,7 @@
 		4529F4B61BF11B1C00B8ECFA /* TextDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4529F4B51BF11B1C00B8ECFA /* TextDetailViewController.swift */; };
 		4529F4B81BF13F7000B8ECFA /* TextDetailTogglesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4529F4B71BF13F7000B8ECFA /* TextDetailTogglesViewController.swift */; };
 		4529F4BA1BF26AC500B8ECFA /* TextOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4529F4B91BF26AC500B8ECFA /* TextOptions.swift */; };
+		4529F4FB1BF513E900B8ECFA /* FontsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4529F4FA1BF513E900B8ECFA /* FontsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		4529F4B51BF11B1C00B8ECFA /* TextDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextDetailViewController.swift; sourceTree = "<group>"; };
 		4529F4B71BF13F7000B8ECFA /* TextDetailTogglesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextDetailTogglesViewController.swift; sourceTree = "<group>"; };
 		4529F4B91BF26AC500B8ECFA /* TextOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextOptions.swift; sourceTree = "<group>"; };
+		4529F4FA1BF513E900B8ECFA /* FontsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsTableViewController.swift; sourceTree = "<group>"; };
 		CEAA33B8BE2717733113DE80 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE52EA52F5B557728A63007 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		ED72BF038A2430EA1A8B0493 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				4529F4B51BF11B1C00B8ECFA /* TextDetailViewController.swift */,
 				4529F4B91BF26AC500B8ECFA /* TextOptions.swift */,
 				4529F4B71BF13F7000B8ECFA /* TextDetailTogglesViewController.swift */,
+				4529F4FA1BF513E900B8ECFA /* FontsTableViewController.swift */,
 				4529F48E1BF0F08200B8ECFA /* Assets.xcassets */,
 				4529F4901BF0F08200B8ECFA /* LaunchScreen.storyboard */,
 				4529F4931BF0F08300B8ECFA /* Info.plist */,
@@ -345,6 +348,7 @@
 				4529F48A1BF0F08200B8ECFA /* BaseDetailViewController.swift in Sources */,
 				4529F4881BF0F08200B8ECFA /* MasterViewController.swift in Sources */,
 				4529F4861BF0F08200B8ECFA /* AppDelegate.swift in Sources */,
+				4529F4FB1BF513E900B8ECFA /* FontsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
