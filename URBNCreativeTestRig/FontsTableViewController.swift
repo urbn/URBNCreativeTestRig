@@ -9,12 +9,13 @@
 import UIKit
 import URBNDataSource
 
-class FontsTableViewController: UITableViewController {
+class FontsTableViewController: UITableViewController, UISearchResultsUpdating {
 
     private let completion: (fontName: String) -> (Void)
     private let dataSource = URBNArrayDataSourceAdapter(items: nil)
+    private var tableData: Array<String> = []
     private lazy var typeFaces: Array<String> = {
-        var fonts: Array<String> = SystemFonts.allValues
+        var fonts: Array<String> = []
         
         let fontFamilies = UIFont.familyNames()
         for family in fontFamilies {
@@ -26,6 +27,11 @@ class FontsTableViewController: UITableViewController {
             }
         }
         
+        fonts.sortInPlace(<)
+        
+        SystemFonts.allValues
+        fonts.insertContentsOf(SystemFonts.allValues, at: 0)
+
         return fonts
     }()
     
@@ -44,7 +50,19 @@ class FontsTableViewController: UITableViewController {
         
         self.view.backgroundColor = UIColor.whiteColor()
         
-        dataSource.replaceItems(typeFaces)
+        
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.sizeToFit()
+        
+        self.tableView.tableHeaderView = searchController.searchBar
+        
+//        return controller
+        
+        
+        tableData = typeFaces
+        dataSource.replaceItems(tableData)
         
         self.tableView.dataSource = dataSource
         self.tableView.delegate = self
@@ -63,5 +81,24 @@ class FontsTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         completion(fontName: typeFaces[indexPath.row])
+    }
+    
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+//        tableData.removeAll()
+        
+//        let searchPred = NSPredicate(format: "SELF CONTAINS[c] %@", searchController.searchBar.text!)
+//        var sushiRestaurants = restaurants.filter { (restaurant : Restaurant) -> Bool in
+//            return contains(restaurant.type, .Sushi)
+//        }
+//        let filteredArray = typeFaces.filter { (name: String) -> Bool in
+//            return name.containsString(searchController.searchBar.text!)
+//        }
+        //        filteredTableData.removeAll(keepCapacity: false)
+//        
+//        let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchController.searchBar.text)
+//        let array = (tableData as NSArray).filteredArrayUsingPredicate(searchPredicate)
+//        filteredTableData = array as! [String]
+//        
+//        self.tableView.reloadData()
     }
 }
