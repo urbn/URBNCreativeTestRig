@@ -39,7 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4529F4821BF0F08200B8ECFA /* URBNCreativeTestRig.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URBNCreativeTestRig.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4529F4821BF0F08200B8ECFA /* URBN UI Tool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "URBN UI Tool.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4529F4851BF0F08200B8ECFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4529F4871BF0F08200B8ECFA /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		4529F4891BF0F08200B8ECFA /* BaseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDetailViewController.swift; sourceTree = "<group>"; };
@@ -110,7 +110,7 @@
 		4529F4831BF0F08200B8ECFA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4529F4821BF0F08200B8ECFA /* URBNCreativeTestRig.app */,
+				4529F4821BF0F08200B8ECFA /* URBN UI Tool.app */,
 				4529F4981BF0F08300B8ECFA /* URBNCreativeTestRigTests.xctest */,
 				4529F4A31BF0F08300B8ECFA /* URBNCreativeTestRigUITests.xctest */,
 			);
@@ -181,7 +181,7 @@
 			);
 			name = URBNCreativeTestRig;
 			productName = URBNCreativeTestRig;
-			productReference = 4529F4821BF0F08200B8ECFA /* URBNCreativeTestRig.app */;
+			productReference = 4529F4821BF0F08200B8ECFA /* URBN UI Tool.app */;
 			productType = "com.apple.product-type.application";
 		};
 		4529F4971BF0F08300B8ECFA /* URBNCreativeTestRigTests */ = {
@@ -486,7 +486,7 @@
 				INFOPLIST_FILE = URBNCreativeTestRig/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.urbn.URBNCreativeTestRig;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "URBN UI Tool";
 			};
 			name = Debug;
 		};
@@ -495,10 +495,12 @@
 			baseConfigurationReference = DFE52EA52F5B557728A63007 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Urban Outfitters (Ent)";
 				INFOPLIST_FILE = URBNCreativeTestRig/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.urbn.URBNCreativeTestRig;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "URBN UI Tool";
+				PROVISIONING_PROFILE = "1a7f40f5-496b-4a7d-a9f3-c972adf782ed";
 			};
 			name = Release;
 		};
