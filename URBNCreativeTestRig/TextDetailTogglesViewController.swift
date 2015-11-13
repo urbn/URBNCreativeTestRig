@@ -336,10 +336,7 @@ class TextDetailTogglesViewController: UIViewController, UIPickerViewDataSource,
     }
 
     func save() {
-        if currentresponder != nil {
-            currentresponder?.resignFirstResponder()
-        }
-        
+        currentresponder?.resignFirstResponder()
         completionCallback(canceled: false, options: options)
     }
     
