@@ -16,14 +16,6 @@ class MasterViewController: UITableViewController {
     private let dataSource: URBNArrayDataSourceAdapter = URBNArrayDataSourceAdapter(items: nil)
     private var objects = [BaseDetailViewController]()
 
-    override init(style: UITableViewStyle) {
-        super.init(style: style)
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

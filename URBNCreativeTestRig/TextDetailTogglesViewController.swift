@@ -53,7 +53,7 @@ class TextDetailTogglesViewController: UIViewController, UIPickerViewDataSource,
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: "cancel")
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Save, target: self, action: "save")
 
-        let accessoryView = UIToolbar(frame: CGRectMake(0.0, 0.0, view.width, 34.0))
+        let accessoryView = UIToolbar(frame: CGRectMake(0.0, 0.0, view.width, 44.0))
         accessoryView.items = [UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil), UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: "dismissKeyboard")]
         let line = UIView()
         line.backgroundColor = UIColor.grayColor()
