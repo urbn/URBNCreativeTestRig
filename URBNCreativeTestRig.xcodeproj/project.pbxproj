@@ -255,6 +255,7 @@
 				TargetAttributes = {
 					4529F4811BF0F08200B8ECFA = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 6438N9QD27;
 					};
 					4529F4971BF0F08300B8ECFA = {
 						CreatedOnToolsVersion = 7.1;
@@ -511,7 +512,9 @@
 			baseConfigurationReference = ED72BF038A2430EA1A8B0493 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = URBNCreativeTestRig/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.urbn.URBNCreativeTestRig;
 				PRODUCT_NAME = "URBN UI Tool";
@@ -523,8 +526,9 @@
 			baseConfigurationReference = DFE52EA52F5B557728A63007 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Urban Outfitters (Ent)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = URBNCreativeTestRig/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.urbn.URBNCreativeTestRig;
 				PRODUCT_NAME = "URBN UI Tool";
