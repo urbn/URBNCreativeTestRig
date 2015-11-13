@@ -9,7 +9,7 @@
 import UIKit
 import URBNDataSource
 
-class FontsTableViewController: UITableViewController, UISearchResultsUpdating, UISearchBarDelegate {
+class FontsTableViewController: UITableViewController, UISearchResultsUpdating {
 
     private let completion: (fontName: String) -> (Void)
     private let dataSource = URBNArrayDataSourceAdapter(items: nil)
@@ -18,17 +18,17 @@ class FontsTableViewController: UITableViewController, UISearchResultsUpdating, 
     private var tableData: Array<String> = []
     
     private lazy var typeFaces: Array<String> = {
-        var fonts: Array<String> = []
-        
         let fontFamilies = UIFont.familyNames()
-        for family in fontFamilies {
+        var fonts = fontFamilies.reduce([String](), combine: { (var fonts, family) -> [String] in
             if UIFont.fontNamesForFamilyName(family).count > 0 {
                 fonts.appendContentsOf(UIFont.fontNamesForFamilyName(family))
             }
             else {
                 fonts.append(family)
             }
-        }
+            
+            return fonts
+        })
         
         fonts.sortInPlace(<)
         
@@ -78,14 +78,14 @@ class FontsTableViewController: UITableViewController, UISearchResultsUpdating, 
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        completion(fontName: tableData[indexPath.row])
+        let name = tableData[indexPath.row]
+        searchController.active = false
+        completion(fontName: name)
     }
     
     func updateSearchResultsForSearchController(searchController: UISearchController) {
-        if let searchText = searchController.searchBar.text where searchText != "" {
-            tableData = typeFaces.filter { (name: String) -> Bool in
-                return name.lowercaseString.hasPrefix(searchText.lowercaseString)
-            }
+        if let searchText = searchController.searchBar.text where !searchText.isEmpty {
+            tableData = typeFaces.filter({$0.lowercaseString.hasPrefix(searchText.lowercaseString)})
         }
         else {
             tableData = typeFaces
@@ -93,4 +93,5 @@ class FontsTableViewController: UITableViewController, UISearchResultsUpdating, 
 
         dataSource.replaceItems(tableData)
     }
+    
 }

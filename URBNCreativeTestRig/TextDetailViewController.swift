@@ -108,7 +108,7 @@ class TextDetailViewController: BaseDetailViewController {
         }
     }
     
-    func closeToggles() {
+    private func closeToggles() {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 
