@@ -11,7 +11,7 @@ import URBNDataSource
 
 class MasterViewController: UITableViewController {
 
-    internal var detailViewController: UINavigationController?
+    var detailViewController: UINavigationController?
     
     private let dataSource: URBNArrayDataSourceAdapter = URBNArrayDataSourceAdapter(items: nil)
     private var objects = [BaseDetailViewController]()

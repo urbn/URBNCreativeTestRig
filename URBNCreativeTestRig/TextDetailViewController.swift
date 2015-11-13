@@ -10,8 +10,8 @@ import UIKit
 import URBNConvenience
 
 class OptionsLabel: UILabel {
-    var optionsKey: String
-    var options: TextOptions = TextOptions() {
+    private var optionsKey: String
+    private var options: TextOptions = TextOptions() {
         didSet {
             let data = NSKeyedArchiver.archivedDataWithRootObject(options)
             NSUserDefaults.standardUserDefaults().setObject(data, forKey: optionsKey)

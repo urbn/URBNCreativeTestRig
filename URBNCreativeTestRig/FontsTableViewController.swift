@@ -38,7 +38,7 @@ class FontsTableViewController: UITableViewController, UISearchResultsUpdating, 
         return fonts
     }()
     
-    internal init(completionBlock: (fontName: String) -> (Void)) {
+    init(completionBlock: (fontName: String) -> (Void)) {
         completion = completionBlock
         
         super.init(style: .Plain)

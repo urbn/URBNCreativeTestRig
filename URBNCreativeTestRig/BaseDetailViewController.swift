@@ -10,7 +10,7 @@ import UIKit
 
 class BaseDetailViewController: UIViewController {
 
-    class internal var displayName: String {
+    class var displayName: String {
         return "Override Me"
     }
     

@@ -28,14 +28,14 @@ enum TextAlignment: String {
 }
 
 class TextOptions: NSObject, NSCopying, NSCoding {
-    internal var text: String = "Sample"
-    internal var typeFace: String = SystemFonts.Regular.rawValue
-    internal var fontSize: Double = 14.0
-    internal var textColor: String = "#000000"
-    internal var kerning: Double = 0.0
-    internal var alignment: TextAlignment = .Left
-    internal var lineSpacing: Double = 0.0
-    internal var paragraphSpacing: Double = 0.0
+    var text: String = "Sample"
+    var typeFace: String = SystemFonts.Regular.rawValue
+    var fontSize: Double = 14.0
+    var textColor: String = "#000000"
+    var kerning: Double = 0.0
+    var alignment: TextAlignment = .Left
+    var lineSpacing: Double = 0.0
+    var paragraphSpacing: Double = 0.0
     
     required convenience init?(coder decoder: NSCoder) {
         guard let text = decoder.decodeObjectForKey("text") as? String,
@@ -74,7 +74,7 @@ class TextOptions: NSObject, NSCopying, NSCoding {
     
     required override init() { }
     
-    internal func attributedString() -> NSAttributedString {
+    func attributedString() -> NSAttributedString {
         let font = TextOptions.fontForName(typeFace, size: CGFloat(fontSize))
         
         let textAlignment: NSTextAlignment
@@ -103,7 +103,7 @@ class TextOptions: NSObject, NSCopying, NSCoding {
         return NSAttributedString(string: text, attributes: [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor(hexString: textColor), NSKernAttributeName: kerning, NSParagraphStyleAttributeName: pStyle.copy()])
     }
     
-    static internal func fontForName(name: String, size: CGFloat) -> (UIFont) {
+    static func fontForName(name: String, size: CGFloat) -> (UIFont) {
         let font: UIFont
         
         if name == SystemFonts.Italic.rawValue {

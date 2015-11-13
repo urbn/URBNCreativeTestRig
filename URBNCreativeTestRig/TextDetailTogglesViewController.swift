@@ -19,22 +19,22 @@ class OptionTextField: UITextField {
 
 class TextDetailTogglesViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate, UITextViewDelegate {
 
-    let options: TextOptions
-    let completionCallback: (canceled: Bool, options: TextOptions) -> (Void)
+    private let options: TextOptions
+    private let completionCallback: (canceled: Bool, options: TextOptions) -> (Void)
 
-    let textView = UITextView()
-    let fontField = OptionTextField()
-    let sizeField = UITextField()
-    let kerningField = UITextField()
-    let colorField = OptionTextField()
+    private let textView = UITextView()
+    private let fontField = OptionTextField()
+    private let sizeField = UITextField()
+    private let kerningField = UITextField()
+    private let colorField = OptionTextField()
 
-    let alignmentField = OptionTextField()
-    let lineSpacingField = UITextField()
-    let paragraphSpacingField = UITextField()
+    private let alignmentField = OptionTextField()
+    private let lineSpacingField = UITextField()
+    private let paragraphSpacingField = UITextField()
     
-    var currentresponder: UIResponder?
+    private var currentresponder: UIResponder?
     
-    internal init(textOptions: TextOptions, completion: (canceled: Bool, options: TextOptions) -> Void) {
+    init(textOptions: TextOptions, completion: (canceled: Bool, options: TextOptions) -> Void) {
         options = textOptions.copy() as! TextOptions
         completionCallback = completion
         
