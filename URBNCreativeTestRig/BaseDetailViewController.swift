@@ -17,8 +17,8 @@ class BaseDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = self.dynamicType.displayName
-        self.navigationController?.navigationBar.translucent = false
+        title = self.dynamicType.displayName
+        navigationController?.navigationBar.translucent = false
     }
 
 }

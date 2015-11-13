@@ -48,12 +48,12 @@ class TextDetailTogglesViewController: UIViewController, UIPickerViewDataSource,
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.whiteColor()
-        self.navigationController?.navigationBar.translucent = false
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: "cancel")
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Save, target: self, action: "save")
+        view.backgroundColor = UIColor.whiteColor()
+        navigationController?.navigationBar.translucent = false
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: "cancel")
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Save, target: self, action: "save")
 
-        let accessoryView = UIToolbar(frame: CGRectMake(0.0, 0.0, self.view.width, 34.0))
+        let accessoryView = UIToolbar(frame: CGRectMake(0.0, 0.0, view.width, 34.0))
         accessoryView.items = [UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil), UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: "dismissKeyboard")]
         let line = UIView()
         line.backgroundColor = UIColor.grayColor()
@@ -75,7 +75,7 @@ class TextDetailTogglesViewController: UIViewController, UIPickerViewDataSource,
         textView.layer.borderWidth = 1.0
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.inputAccessoryView = accessoryView
-        self.view.addSubview(textView)
+        view.addSubview(textView)
         
         let fontLabel = UILabel()
         fontLabel.text = "Font:"
@@ -110,7 +110,7 @@ class TextDetailTogglesViewController: UIViewController, UIPickerViewDataSource,
                 label.font = UIFont.boldSystemFontOfSize(14.0)
                 label.translatesAutoresizingMaskIntoConstraints = false
                 label.setContentHuggingPriority(UILayoutPriorityRequired, forAxis: .Horizontal)
-                self.view.addSubview(label)
+                view.addSubview(label)
             }
         }
         
@@ -122,7 +122,7 @@ class TextDetailTogglesViewController: UIViewController, UIPickerViewDataSource,
         
         fontField.text = options.typeFace
         values["fontField"] = fontField
-        fontField.setTextBlock = {
+        fontField.setTextBlock = {[unowned self] in
             self.options.typeFace = self.fontField.text!
         }
 
@@ -137,7 +137,7 @@ class TextDetailTogglesViewController: UIViewController, UIPickerViewDataSource,
         sizeStepper.value = options.fontSize
         sizeStepper.translatesAutoresizingMaskIntoConstraints = false
         sizeStepper.addTarget(self, action: "fontSizeStepperValueChanged:", forControlEvents: .ValueChanged)
-        self.view.addSubview(sizeStepper)
+        view.addSubview(sizeStepper)
         
         kerningField.text = options.kerning.description
         kerningField.userInteractionEnabled = false
@@ -150,7 +150,7 @@ class TextDetailTogglesViewController: UIViewController, UIPickerViewDataSource,
         kerningStepper.value = options.kerning
         kerningStepper.translatesAutoresizingMaskIntoConstraints = false
         kerningStepper.addTarget(self, action: "kerningStepperValueChanged:", forControlEvents: .ValueChanged)
-        self.view.addSubview(kerningStepper)
+        view.addSubview(kerningStepper)
         
         let colorSwatch = UIButton(type: .Custom)
         colorSwatch.backgroundColor = UIColor(hexString: options.textColor)
@@ -159,11 +159,11 @@ class TextDetailTogglesViewController: UIViewController, UIPickerViewDataSource,
         colorSwatch.layer.borderColor = UIColor.grayColor().CGColor
         colorSwatch.layer.borderWidth = 1.0
         colorSwatch.addTarget(self, action: "colorSwatchTouched", forControlEvents: .TouchUpInside)
-        self.view.addSubview(colorSwatch)
+        view.addSubview(colorSwatch)
         
         colorField.text = options.textColor
         colorField.delegate = self
-        colorField.setTextBlock = {
+        colorField.setTextBlock = {[unowned self] in
             self.options.textColor = self.colorField.text!
             colorSwatch.backgroundColor = UIColor(hexString: self.colorField.text)
         }
@@ -171,7 +171,7 @@ class TextDetailTogglesViewController: UIViewController, UIPickerViewDataSource,
         
         alignmentField.text = options.alignment.rawValue
         alignmentField.inputView = picker
-        alignmentField.setTextBlock = {
+        alignmentField.setTextBlock = {[unowned self] in
             self.options.alignment = TextAlignment(rawValue: self.alignmentField.text!)!
         }
         values["alignmentField"] = alignmentField
@@ -187,7 +187,7 @@ class TextDetailTogglesViewController: UIViewController, UIPickerViewDataSource,
         lineSpacingStepper.value = options.lineSpacing
         lineSpacingStepper.translatesAutoresizingMaskIntoConstraints = false
         lineSpacingStepper.addTarget(self, action: "lineSpacingStepperValueChanged:", forControlEvents: .ValueChanged)
-        self.view.addSubview(lineSpacingStepper)
+        view.addSubview(lineSpacingStepper)
 
         paragraphSpacingField.text = options.paragraphSpacing.description
         paragraphSpacingField.userInteractionEnabled = false
@@ -200,7 +200,7 @@ class TextDetailTogglesViewController: UIViewController, UIPickerViewDataSource,
         paragraphSpacingStepper.value = options.lineSpacing
         paragraphSpacingStepper.translatesAutoresizingMaskIntoConstraints = false
         paragraphSpacingStepper.addTarget(self, action: "paragraphSpacingStepperValueChanged:", forControlEvents: .ValueChanged)
-        self.view.addSubview(paragraphSpacingStepper)
+        view.addSubview(paragraphSpacingStepper)
 
         for value in values.values {
             if let value = value as? UITextField {
@@ -211,7 +211,7 @@ class TextDetailTogglesViewController: UIViewController, UIPickerViewDataSource,
                 value.translatesAutoresizingMaskIntoConstraints = false
                 value.textColor = UIColor.grayColor()
                 value.setContentHuggingPriority(UILayoutPriorityDefaultLow, forAxis: .Horizontal)
-                self.view.addSubview(value)
+                view.addSubview(value)
             }
         }
 
@@ -336,6 +336,10 @@ class TextDetailTogglesViewController: UIViewController, UIPickerViewDataSource,
     }
 
     func save() {
+        if currentresponder != nil {
+            currentresponder?.resignFirstResponder()
+        }
+        
         completionCallback(canceled: false, options: options)
     }
     

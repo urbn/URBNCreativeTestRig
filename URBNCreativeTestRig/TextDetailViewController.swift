@@ -51,31 +51,31 @@ class TextDetailViewController: BaseDetailViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.whiteColor()
+        view.backgroundColor = UIColor.whiteColor()
         
         if titleLabel.options.text == "Sample" {
             titleLabel.options.text = "This is your title"
         }
         titleLabel.attributedText = titleLabel.options.attributedString()
-        self.view.addSubview(titleLabel)
+        view.addSubview(titleLabel)
         
         if subTitleLabel.options.text == "Sample" {
             subTitleLabel.options.text = "This is your subtitle title"
         }
         subTitleLabel.attributedText = subTitleLabel.options.attributedString()
-        self.view.addSubview(subTitleLabel)
+        view.addSubview(subTitleLabel)
 
         if bodyLabel.options.text == "Sample" {
             bodyLabel.options.text = "This is your body text. Double tap any of the labels to edit individual values for the labels."
         }
         bodyLabel.attributedText = bodyLabel.options.attributedString()
-        self.view.addSubview(bodyLabel)
+        view.addSubview(bodyLabel)
 
         if priceLabel.options.text == "Sample" {
             priceLabel.options.text = "$100"
         }
         priceLabel.attributedText = priceLabel.options.attributedString()
-        self.view.addSubview(priceLabel)
+        view.addSubview(priceLabel)
         
         let views: Dictionary<String, UILabel> = ["titleLabel" : titleLabel, "subTitleLabel" : subTitleLabel, "bodyLabel" : bodyLabel, "priceLabel" : priceLabel]
 

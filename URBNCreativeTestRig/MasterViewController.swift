@@ -27,14 +27,14 @@ class MasterViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.whiteColor()
+        view.backgroundColor = UIColor.whiteColor()
 
         dataSource.replaceItems([TextDetailViewController.self])
         
-        self.tableView.dataSource = dataSource
-        self.tableView.delegate = self
+        tableView.dataSource = dataSource
+        tableView.delegate = self
         dataSource.fallbackDataSource = self
-        dataSource.tableView = self.tableView
+        dataSource.tableView = tableView
         
         dataSource.registerCellClass(UITableViewCell.self) { (cell, obj, indexPath) -> Void in
             if let tvCell = cell as? UITableViewCell {
@@ -51,7 +51,7 @@ class MasterViewController: UITableViewController {
             let vc = vcClass.init()
             
             detailVC.viewControllers = [vc]
-            self.splitViewController?.showDetailViewController(detailVC, sender: self)
+            splitViewController?.showDetailViewController(detailVC, sender: self)
         }
     }
 

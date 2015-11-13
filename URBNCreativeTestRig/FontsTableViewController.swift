@@ -51,7 +51,7 @@ class FontsTableViewController: UITableViewController, UISearchResultsUpdating, 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.whiteColor()
+        view.backgroundColor = UIColor.whiteColor()
         
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
