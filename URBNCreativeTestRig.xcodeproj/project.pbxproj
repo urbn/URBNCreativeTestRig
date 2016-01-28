@@ -513,11 +513,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jason Grandelli (Z53472LY6A)";
 				INFOPLIST_FILE = URBNCreativeTestRig/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.urbn.URBNCreativeTestRig;
 				PRODUCT_NAME = "URBN UI Tool";
+				PROVISIONING_PROFILE = "543b2934-c8da-491e-8f51-b1df01ff6c53";
 			};
 			name = Debug;
 		};
@@ -526,7 +528,8 @@
 			baseConfigurationReference = DFE52EA52F5B557728A63007 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Urban Outfitters (Ent)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Urban Outfitters (Ent)";
 				INFOPLIST_FILE = URBNCreativeTestRig/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

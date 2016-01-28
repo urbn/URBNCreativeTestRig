@@ -9,7 +9,7 @@
 import UIKit
 
 class OptionTextField: UITextField {
-    var setTextBlock: () -> (Void) = {}
+    var setTextBlock: () -> () = {}
     override var text: String? {
         didSet {
             setTextBlock()

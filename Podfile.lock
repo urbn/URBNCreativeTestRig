@@ -1,16 +1,21 @@
 PODS:
+  - HockeySDK (3.8.5):
+    - HockeySDK/AllFeaturesLib (= 3.8.5)
+  - HockeySDK/AllFeaturesLib (3.8.5)
   - UIColor-Utilities (1.0.1)
   - UIImage+Additions (1.1.0)
   - URBNConvenience (0.8.6)
   - URBNDataSource (1.0.1)
 
 DEPENDENCIES:
+  - HockeySDK
   - UIColor-Utilities (= 1.0.1)
   - UIImage+Additions (= 1.1.0)
   - URBNConvenience
   - URBNDataSource
 
 SPEC CHECKSUMS:
+  HockeySDK: dd11a2b9da3372fd025643bee5bc10c8c613d169
   UIColor-Utilities: 6746a54dcdb3bc012dd7aeaeea5588ae2100beb2
   UIImage+Additions: d9e3c1fc2d5a1f44de593b4df2f1890f59cc7a24
   URBNConvenience: 82dc1409abf44d1f0359c3289ab7db446c42dc71

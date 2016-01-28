@@ -8,6 +8,8 @@
 
 import UIKit
 
+import HockeySDK
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
 
@@ -15,7 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        BITHockeyManager.sharedHockeyManager().configureWithIdentifier("d605479e1a864ce28cc26f5dc329849a")
+        BITHockeyManager.sharedHockeyManager().startManager()
+        BITHockeyManager.sharedHockeyManager().authenticator.authenticateInstallation()
+        BITHockeyManager.sharedHockeyManager().disableCrashManager = false
+        
+
+        
         let masterVC = MasterViewController(style: UITableViewStyle.Plain)
         let masterNavVC = UINavigationController(rootViewController: masterVC)
         let detailVC = UINavigationController(rootViewController: BaseDetailViewController())

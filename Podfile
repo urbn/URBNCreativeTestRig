@@ -8,3 +8,5 @@ pod 'URBNDataSource'
 
 pod 'UIColor-Utilities', '1.0.1'
 pod 'UIImage+Additions', '1.1.0'
+
+pod 'HockeySDK'
