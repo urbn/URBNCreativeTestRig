@@ -10,12 +10,20 @@
 		10A71D38C01985AFF126C2F1 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEAA33B8BE2717733113DE80 /* Pods.framework */; };
 		4529F4861BF0F08200B8ECFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4529F4851BF0F08200B8ECFA /* AppDelegate.swift */; };
 		4529F4881BF0F08200B8ECFA /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4529F4871BF0F08200B8ECFA /* MasterViewController.swift */; };
-		4529F48A1BF0F08200B8ECFA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4529F4891BF0F08200B8ECFA /* DetailViewController.swift */; };
-		4529F48D1BF0F08200B8ECFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4529F48B1BF0F08200B8ECFA /* Main.storyboard */; };
+		4529F48A1BF0F08200B8ECFA /* BaseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4529F4891BF0F08200B8ECFA /* BaseDetailViewController.swift */; };
 		4529F48F1BF0F08200B8ECFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4529F48E1BF0F08200B8ECFA /* Assets.xcassets */; };
 		4529F4921BF0F08200B8ECFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4529F4901BF0F08200B8ECFA /* LaunchScreen.storyboard */; };
 		4529F49D1BF0F08300B8ECFA /* URBNCreativeTestRigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4529F49C1BF0F08300B8ECFA /* URBNCreativeTestRigTests.swift */; };
 		4529F4A81BF0F08300B8ECFA /* URBNCreativeTestRigUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4529F4A71BF0F08300B8ECFA /* URBNCreativeTestRigUITests.swift */; };
+		4529F4B61BF11B1C00B8ECFA /* TextDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4529F4B51BF11B1C00B8ECFA /* TextDetailViewController.swift */; };
+		4529F4B81BF13F7000B8ECFA /* TextDetailTogglesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4529F4B71BF13F7000B8ECFA /* TextDetailTogglesViewController.swift */; };
+		4529F4BA1BF26AC500B8ECFA /* TextOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4529F4B91BF26AC500B8ECFA /* TextOptions.swift */; };
+		4529F4FB1BF513E900B8ECFA /* FontsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4529F4FA1BF513E900B8ECFA /* FontsTableViewController.swift */; };
+		4529F5021BF531C000B8ECFA /* Bitstream - Clarendon BT Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4529F4FD1BF531C000B8ECFA /* Bitstream - Clarendon BT Bold.ttf */; };
+		4529F5031BF531C000B8ECFA /* Bitstream - Clarendon BT Roman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4529F4FE1BF531C000B8ECFA /* Bitstream - Clarendon BT Roman.ttf */; };
+		4529F5041BF531C000B8ECFA /* Bitstream - Clarendon Lt BT Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4529F4FF1BF531C000B8ECFA /* Bitstream - Clarendon Lt BT Light.ttf */; };
+		4529F5051BF531C000B8ECFA /* MrsEavesOT-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4529F5001BF531C000B8ECFA /* MrsEavesOT-Italic.otf */; };
+		4529F5061BF531C000B8ECFA /* MrsEavesOT-RomanLining.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4529F5011BF531C000B8ECFA /* MrsEavesOT-RomanLining.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4529F4821BF0F08200B8ECFA /* URBNCreativeTestRig.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URBNCreativeTestRig.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4529F4821BF0F08200B8ECFA /* URBN UI Tool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "URBN UI Tool.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4529F4851BF0F08200B8ECFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4529F4871BF0F08200B8ECFA /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		4529F4891BF0F08200B8ECFA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		4529F48C1BF0F08200B8ECFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4529F4891BF0F08200B8ECFA /* BaseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDetailViewController.swift; sourceTree = "<group>"; };
 		4529F48E1BF0F08200B8ECFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4529F4911BF0F08200B8ECFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4529F4931BF0F08300B8ECFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +57,15 @@
 		4529F4A31BF0F08300B8ECFA /* URBNCreativeTestRigUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = URBNCreativeTestRigUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4529F4A71BF0F08300B8ECFA /* URBNCreativeTestRigUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URBNCreativeTestRigUITests.swift; sourceTree = "<group>"; };
 		4529F4A91BF0F08300B8ECFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4529F4B51BF11B1C00B8ECFA /* TextDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextDetailViewController.swift; sourceTree = "<group>"; };
+		4529F4B71BF13F7000B8ECFA /* TextDetailTogglesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextDetailTogglesViewController.swift; sourceTree = "<group>"; };
+		4529F4B91BF26AC500B8ECFA /* TextOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextOptions.swift; sourceTree = "<group>"; };
+		4529F4FA1BF513E900B8ECFA /* FontsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsTableViewController.swift; sourceTree = "<group>"; };
+		4529F4FD1BF531C000B8ECFA /* Bitstream - Clarendon BT Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bitstream - Clarendon BT Bold.ttf"; sourceTree = "<group>"; };
+		4529F4FE1BF531C000B8ECFA /* Bitstream - Clarendon BT Roman.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bitstream - Clarendon BT Roman.ttf"; sourceTree = "<group>"; };
+		4529F4FF1BF531C000B8ECFA /* Bitstream - Clarendon Lt BT Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bitstream - Clarendon Lt BT Light.ttf"; sourceTree = "<group>"; };
+		4529F5001BF531C000B8ECFA /* MrsEavesOT-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MrsEavesOT-Italic.otf"; sourceTree = "<group>"; };
+		4529F5011BF531C000B8ECFA /* MrsEavesOT-RomanLining.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MrsEavesOT-RomanLining.otf"; sourceTree = "<group>"; };
 		CEAA33B8BE2717733113DE80 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE52EA52F5B557728A63007 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		ED72BF038A2430EA1A8B0493 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -104,7 +120,7 @@
 		4529F4831BF0F08200B8ECFA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4529F4821BF0F08200B8ECFA /* URBNCreativeTestRig.app */,
+				4529F4821BF0F08200B8ECFA /* URBN UI Tool.app */,
 				4529F4981BF0F08300B8ECFA /* URBNCreativeTestRigTests.xctest */,
 				4529F4A31BF0F08300B8ECFA /* URBNCreativeTestRigUITests.xctest */,
 			);
@@ -116,11 +132,15 @@
 			children = (
 				4529F4851BF0F08200B8ECFA /* AppDelegate.swift */,
 				4529F4871BF0F08200B8ECFA /* MasterViewController.swift */,
-				4529F4891BF0F08200B8ECFA /* DetailViewController.swift */,
-				4529F48B1BF0F08200B8ECFA /* Main.storyboard */,
+				4529F4891BF0F08200B8ECFA /* BaseDetailViewController.swift */,
+				4529F4B51BF11B1C00B8ECFA /* TextDetailViewController.swift */,
+				4529F4B91BF26AC500B8ECFA /* TextOptions.swift */,
+				4529F4B71BF13F7000B8ECFA /* TextDetailTogglesViewController.swift */,
+				4529F4FA1BF513E900B8ECFA /* FontsTableViewController.swift */,
 				4529F48E1BF0F08200B8ECFA /* Assets.xcassets */,
 				4529F4901BF0F08200B8ECFA /* LaunchScreen.storyboard */,
 				4529F4931BF0F08300B8ECFA /* Info.plist */,
+				4529F4FC1BF531C000B8ECFA /* fonts */,
 			);
 			path = URBNCreativeTestRig;
 			sourceTree = "<group>";
@@ -141,6 +161,18 @@
 				4529F4A91BF0F08300B8ECFA /* Info.plist */,
 			);
 			path = URBNCreativeTestRigUITests;
+			sourceTree = "<group>";
+		};
+		4529F4FC1BF531C000B8ECFA /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4529F4FD1BF531C000B8ECFA /* Bitstream - Clarendon BT Bold.ttf */,
+				4529F4FE1BF531C000B8ECFA /* Bitstream - Clarendon BT Roman.ttf */,
+				4529F4FF1BF531C000B8ECFA /* Bitstream - Clarendon Lt BT Light.ttf */,
+				4529F5001BF531C000B8ECFA /* MrsEavesOT-Italic.otf */,
+				4529F5011BF531C000B8ECFA /* MrsEavesOT-RomanLining.otf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		9372D3927426D3D6DDB706D6 /* Pods */ = {
@@ -172,7 +204,7 @@
 			);
 			name = URBNCreativeTestRig;
 			productName = URBNCreativeTestRig;
-			productReference = 4529F4821BF0F08200B8ECFA /* URBNCreativeTestRig.app */;
+			productReference = 4529F4821BF0F08200B8ECFA /* URBN UI Tool.app */;
 			productType = "com.apple.product-type.application";
 		};
 		4529F4971BF0F08300B8ECFA /* URBNCreativeTestRigTests */ = {
@@ -223,6 +255,7 @@
 				TargetAttributes = {
 					4529F4811BF0F08200B8ECFA = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 6438N9QD27;
 					};
 					4529F4971BF0F08300B8ECFA = {
 						CreatedOnToolsVersion = 7.1;
@@ -259,9 +292,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4529F5051BF531C000B8ECFA /* MrsEavesOT-Italic.otf in Resources */,
 				4529F4921BF0F08200B8ECFA /* LaunchScreen.storyboard in Resources */,
 				4529F48F1BF0F08200B8ECFA /* Assets.xcassets in Resources */,
-				4529F48D1BF0F08200B8ECFA /* Main.storyboard in Resources */,
+				4529F5041BF531C000B8ECFA /* Bitstream - Clarendon Lt BT Light.ttf in Resources */,
+				4529F5061BF531C000B8ECFA /* MrsEavesOT-RomanLining.otf in Resources */,
+				4529F5021BF531C000B8ECFA /* Bitstream - Clarendon BT Bold.ttf in Resources */,
+				4529F5031BF531C000B8ECFA /* Bitstream - Clarendon BT Roman.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,9 +371,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4529F48A1BF0F08200B8ECFA /* DetailViewController.swift in Sources */,
+				4529F4B81BF13F7000B8ECFA /* TextDetailTogglesViewController.swift in Sources */,
+				4529F4BA1BF26AC500B8ECFA /* TextOptions.swift in Sources */,
+				4529F4B61BF11B1C00B8ECFA /* TextDetailViewController.swift in Sources */,
+				4529F48A1BF0F08200B8ECFA /* BaseDetailViewController.swift in Sources */,
 				4529F4881BF0F08200B8ECFA /* MasterViewController.swift in Sources */,
 				4529F4861BF0F08200B8ECFA /* AppDelegate.swift in Sources */,
+				4529F4FB1BF513E900B8ECFA /* FontsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,14 +413,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4529F48B1BF0F08200B8ECFA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4529F48C1BF0F08200B8ECFA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4529F4901BF0F08200B8ECFA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -479,10 +512,14 @@
 			baseConfigurationReference = ED72BF038A2430EA1A8B0493 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jason Grandelli (Z53472LY6A)";
 				INFOPLIST_FILE = URBNCreativeTestRig/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.urbn.URBNCreativeTestRig;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "URBN UI Tool";
+				PROVISIONING_PROFILE = "543b2934-c8da-491e-8f51-b1df01ff6c53";
 			};
 			name = Debug;
 		};
@@ -491,10 +528,14 @@
 			baseConfigurationReference = DFE52EA52F5B557728A63007 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Urban Outfitters (Ent)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Urban Outfitters (Ent)";
 				INFOPLIST_FILE = URBNCreativeTestRig/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.urbn.URBNCreativeTestRig;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "URBN UI Tool";
+				PROVISIONING_PROFILE = "1a7f40f5-496b-4a7d-a9f3-c972adf782ed";
 			};
 			name = Release;
 		};
