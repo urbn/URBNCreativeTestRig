@@ -38,7 +38,6 @@ class OptionsLabel: UILabel {
 }
 
 class TextDetailViewController: BaseDetailViewController {
-
     class override var displayName: String {
         return "Text Options"
     }

@@ -18,7 +18,6 @@ class OptionTextField: UITextField {
 }
 
 class TextDetailTogglesViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate, UITextViewDelegate {
-
     private let options: TextOptions
     private let completionCallback: (canceled: Bool, options: TextOptions) -> (Void)
 

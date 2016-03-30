@@ -81,16 +81,12 @@ class TextOptions: NSObject, NSCopying, NSCoding {
         switch alignment {
         case .Center:
             textAlignment = .Center
-            
         case .Right:
             textAlignment = .Right
-            
         case .Justified:
             textAlignment = .Justified
-            
         case .Natural:
             textAlignment = .Natural
-            
         default:
             textAlignment = .Left
         }
