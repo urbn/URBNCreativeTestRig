@@ -10,7 +10,6 @@ import UIKit
 import URBNDataSource
 
 class FontsTableViewController: UITableViewController, UISearchResultsUpdating {
-
     private let completion: (fontName: String) -> (Void)
     private let dataSource = URBNArrayDataSourceAdapter(items: nil)
     private let searchController = UISearchController(searchResultsController: nil)
