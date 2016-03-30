@@ -10,7 +10,6 @@ import UIKit
 import URBNDataSource
 
 class MasterViewController: UITableViewController {
-
     var detailViewController: UINavigationController?
     
     private let dataSource: URBNArrayDataSourceAdapter = URBNArrayDataSourceAdapter(items: nil)
@@ -34,7 +33,6 @@ class MasterViewController: UITableViewController {
                 tvCell.textLabel?.text = obj.displayName
             }
         }
-        
     }
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
